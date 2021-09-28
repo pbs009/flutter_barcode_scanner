@@ -25,9 +25,6 @@ class FlutterBarcodeScanner {
   /// be customized with the [cancelButtonText] string.
   static Future<String> scanBarcode(String lineColor, String cancelButtonText,
       bool isShowFlashIcon, ScanMode scanMode) async {
-    if (cancelButtonText.isEmpty) {
-      cancelButtonText = 'Cancel';
-    }
 
     // Pass params to the plugin
     Map params = <String, dynamic>{
@@ -53,9 +50,6 @@ class FlutterBarcodeScanner {
   /// detected barcode strings.
   static Stream? getBarcodeStreamReceiver(String lineColor,
       String cancelButtonText, bool isShowFlashIcon, ScanMode scanMode) {
-    if (cancelButtonText.isEmpty) {
-      cancelButtonText = 'Cancel';
-    }
 
     // Pass params to the plugin
     Map params = <String, dynamic>{
